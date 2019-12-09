@@ -42,4 +42,18 @@ moviieName=enterText
 reader = csv.reader(line.replace('  ', ',') for line in f)   
             
 my_list = list(reader)
+ for i in range(1,len(my_list)):
+                if my_list[i][1]==moviieName:
+                    mygenres=my_list[i][2]                  #selecting genres from all data
+            finalgenres=mygenres.rstrip('\n').split('|')    #splitting tht genres of the input movie
+            testData=finalgenres
+        with open('C:\\Users\\Nayab Moazam\\Python\\ml-latest-small\\movies.csv', mode='r', encoding='UTF-8') as p:    
+            for line in p:
+                dist=0
+                fields = line.rstrip('\n').split(',')
+                movieID = fields[0]             #all movie ids here
+                name = fields[1]                #all names here
+                genres=fields[2]                #all genres here
+                splitgen=genres.rstrip('\n').split('|')     #splitting all genres in a list
+
 
