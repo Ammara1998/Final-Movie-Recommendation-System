@@ -116,5 +116,14 @@ for i in range(0,20):               #selecting top 20 min distance movies
                     ratingStore=[]
                     sumOfrating=0
                     avg2rating.append(avg)          #list of averages
-
+finalid=list()  
+            for l in range(0,6):                    #returning top 6 movies to be recommended
+                max1=-float('inf')
+                for p in range(0,len(avg2rating)):
+                    if avg2rating[p]>max1:
+                        max1=avg2rating[p]
+                        max2=temp1[p]
+                avg2rating.remove(max1)
+                finalid.append(max2)
+                temp1.remove(max2)        
 
