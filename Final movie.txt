@@ -16,4 +16,13 @@ def fnc():
     #key down function
    
 def click():                   #functionality of the search button
+filename = 'C:\\Users\\Nayab Moazam\\Python\\ml-latest-small\\movies.csv'
+        dataset = pd.read_csv(filename)
+        missing_values_count = dataset.isnull().sum()
+        # how many total missing values do we have?
+        total_cells = np.product(dataset.shape)
+        total_missing = missing_values_count.sum()
+        # percent of data that is missing
+        a=(total_missing/total_cells) * 100
+        dataset.dropna()
 
