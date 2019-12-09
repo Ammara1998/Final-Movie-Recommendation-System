@@ -75,6 +75,30 @@ my_list = list(reader)
                         dist+=1   
                 temp.append(dist)               #total distance in temp
                 temp2.append(movieID)           #movie ID corresponding to every distance in temp
-
+for i in range(0,20):               #selecting top 20 min distance movies 
+                min1=float('inf')
+                for j in range(0,len(temp)):
+                    if temp[j]<min1:
+                        min1=temp[j]
+                        min2=temp2[j]
+                temp.remove(min1)        
+                temp1.append(min2)
+                temp2.remove(min2)
+        movied=temp1                    #movied contains the 20 movies with min distance
+        ratingStore= list()
+        movieStore=list()
+        ratingList=list()
+        avg2rating=list()
+        with open('C:\\Users\\Nayab Moazam\\Python\\ml-latest-small\\ratings.csv', mode='r', encoding='UTF-8') as g:
+            line=0
+            i=0
+            for line in g:
+                fields = line.rstrip('\n').split(',')
+                movieID = fields[1]
+                ratingSt=fields[2]
+                if(ratingSt!='rating'):     #converting rating to float
+                    rating=float(ratingSt)
+                    ratingList.append(rating)       #all ratings
+                movieStore.append(movieID)          #all movie ids
 
 
