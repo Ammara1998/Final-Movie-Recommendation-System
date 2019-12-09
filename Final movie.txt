@@ -100,5 +100,21 @@ for i in range(0,20):               #selecting top 20 min distance movies
                     rating=float(ratingSt)
                     ratingList.append(rating)       #all ratings
                 movieStore.append(movieID)          #all movie ids
+		avg=0
+            #rating store saves the ratings of all the 20 movies that were passed by the knn 
+            for j in range(0,len(movied)):
+                for j1 in range(1,len(movieStore)):
+                    if(movied[j]==movieStore[j1]): 
+                        ratingStore.append(ratingList[j1-1]) 
+                        i=i+1
+                #ratings.csv contains the ratings of the movie.
+                #one movie may be rated more than once by different users
+                #calculating the average of all the ratings of the 20 movies
+                if i!=0:
+                    sumOfrating=sum(ratingStore)  
+                    avg=sumOfrating/i 
+                    ratingStore=[]
+                    sumOfrating=0
+                    avg2rating.append(avg)          #list of averages
 
 
