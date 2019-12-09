@@ -202,3 +202,5 @@ line=0
     ######run the main loop
     window.mainloop()
     return
+if _name_ == '_main_':
+   app.run()
