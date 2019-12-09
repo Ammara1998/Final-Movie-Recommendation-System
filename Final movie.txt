@@ -136,4 +136,8 @@ line=0
                     movieTitle=fields[1]
                     idslist.append(Ids) 
                     titlelist.append(movieTitle)
-
+ finalname=list()                #contains names of top 6 movies
+            for i in range(0,len(idslist)):
+                for j in range(0,len(finalid)):
+                    if idslist[i]==finalid[j]:
+                        finalname.append(titlelist[i])
