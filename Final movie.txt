@@ -66,6 +66,15 @@ my_list = list(reader)
                 name = fields[1]                #all names here
                 genres=fields[2]                #all genres here
                 splitgen=genres.rstrip('\n').split('|')     #splitting all genres in a list
+	        for ind in range(0,len(testData)):      #calculates distance from input to entry in file
+                    if testData[ind] not in splitgen:
+                        dist+=1
+        
+                for inde in range(0,len(splitgen)):     #calculates distance from entry in file to input
+                    if splitgen[inde] not in testData:
+                        dist+=1   
+                temp.append(dist)               #total distance in temp
+                temp2.append(movieID)           #movie ID corresponding to every distance in temp
 
->>>>>>> c5db2b9a67dc49af1d921d14e227c7bb5a881850
+
 
