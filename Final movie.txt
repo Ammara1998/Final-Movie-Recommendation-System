@@ -25,4 +25,13 @@ filename = 'C:\\Users\\Nayab Moazam\\Python\\ml-latest-small\\movies.csv'
         # percent of data that is missing
         a=(total_missing/total_cells) * 100
         dataset.dropna()
+for ind in range(0,len(testData)):      #calculates distance from input to entry in file
+                    if testData[ind] not in splitgen:
+                        dist+=1
+        
+                for inde in range(0,len(splitgen)):     #calculates distance from entry in file to input
+                    if splitgen[inde] not in testData:
+                        dist+=1   
+                temp.append(dist)               #total distance in temp
+                temp2.append(movieID)           #movie ID corresponding to every distance in temp
 
