@@ -1,2 +1,8 @@
+<<<<<<< HEAD
 from flask import Flask     #for flask
 import csv                  #for file reading
+=======
+from tkinter import *       #for output and input          
+import pandas as pd         #for file reading
+import numpy as np
+>>>>>>> bfefaadaddab99f59ebb3941a45a9439c9547b15
