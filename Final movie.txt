@@ -9,3 +9,7 @@ import numpy as np
 import operator
 
 from csv import reader
+app = Flask(_name_)
+
+@app.route('/')
+
