@@ -126,4 +126,14 @@ finalid=list()
                 avg2rating.remove(max1)
                 finalid.append(max2)
                 temp1.remove(max2)        
+line=0
+            idslist=list()
+            titlelist=list()
+            with open('C:\\Users\\Nayab Moazam\\Python\\ml-latest-small\\movies.csv', mode='r', encoding='UTF-8') as o:
+                for line in o:
+                    fields=line.rstrip('\n').split(',')
+                    Ids=fields[0]
+                    movieTitle=fields[1]
+                    idslist.append(Ids) 
+                    titlelist.append(movieTitle)
 
