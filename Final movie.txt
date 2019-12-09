@@ -1,8 +1,2 @@
-hgvhgvhgv
-fgrfjkvndkjdvkfnjdkjfkjvjfdk
-fvndihfdiudfdvf
-dhdivhbc
-ruhdhdvudh
-vhuuhdvdbhf
-ffvdnjvuhivfcf
-fifuhuhvfhuivhudi
+from flask import Flask     #for flask
+import csv                  #for file reading
