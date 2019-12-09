@@ -12,4 +12,8 @@ from csv import reader
 app = Flask(_name_)
 
 @app.route('/')
+def fnc():
+    #key down function
+   
+def click():                   #functionality of the search button
 
