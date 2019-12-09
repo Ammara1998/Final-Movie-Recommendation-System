@@ -25,4 +25,21 @@ filename = 'C:\\Users\\Nayab Moazam\\Python\\ml-latest-small\\movies.csv'
         # percent of data that is missing
         a=(total_missing/total_cells) * 100
         dataset.dropna()
+with open('C:\\Users\\Nayab Moazam\\Python\\ml-latest-small\\movies.csv', mode='r', encoding='UTF-8') as f:
+           
+temp = list()
+         
+temp1=list()
+            
+temp2=list()
+            
+enterText=textEntry.get()   #this collects the text from entry box
+         
+Output.delete(0.0,END)
+            
+moviieName=enterText
+            
+reader = csv.reader(line.replace('  ', ',') for line in f)   
+            
+my_list = list(reader)
 
