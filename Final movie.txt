@@ -25,6 +25,7 @@ filename = 'C:\\Users\\Nayab Moazam\\Python\\ml-latest-small\\movies.csv'
         # percent of data that is missing
         a=(total_missing/total_cells) * 100
         dataset.dropna()
+<<<<<<< HEAD
 for ind in range(0,len(testData)):      #calculates distance from input to entry in file
                     if testData[ind] not in splitgen:
                         dist+=1
@@ -34,4 +35,37 @@ for ind in range(0,len(testData)):      #calculates distance from input to entry
                         dist+=1   
                 temp.append(dist)               #total distance in temp
                 temp2.append(movieID)           #movie ID corresponding to every distance in temp
+=======
+with open('C:\\Users\\Nayab Moazam\\Python\\ml-latest-small\\movies.csv', mode='r', encoding='UTF-8') as f:
+           
+temp = list()
+         
+temp1=list()
+            
+temp2=list()
+            
+enterText=textEntry.get()   #this collects the text from entry box
+         
+Output.delete(0.0,END)
+            
+moviieName=enterText
+            
+reader = csv.reader(line.replace('  ', ',') for line in f)   
+            
+my_list = list(reader)
+ for i in range(1,len(my_list)):
+                if my_list[i][1]==moviieName:
+                    mygenres=my_list[i][2]                  #selecting genres from all data
+            finalgenres=mygenres.rstrip('\n').split('|')    #splitting tht genres of the input movie
+            testData=finalgenres
+        with open('C:\\Users\\Nayab Moazam\\Python\\ml-latest-small\\movies.csv', mode='r', encoding='UTF-8') as p:    
+            for line in p:
+                dist=0
+                fields = line.rstrip('\n').split(',')
+                movieID = fields[0]             #all movie ids here
+                name = fields[1]                #all names here
+                genres=fields[2]                #all genres here
+                splitgen=genres.rstrip('\n').split('|')     #splitting all genres in a list
+
+>>>>>>> c5db2b9a67dc49af1d921d14e227c7bb5a881850
 
